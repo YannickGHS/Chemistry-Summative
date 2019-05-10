@@ -1,0 +1,47 @@
+{
+    "1": {
+        "name": "Hydrogen",
+        "symbol": "H"
+    },
+    "2": {
+        "name": "Helium",
+        "symbol": "He"
+    },
+    "3": {
+        "name": "Lithium",
+        "symbol": "Li"
+    },
+    "4": {
+        "name": "Beryllium",
+        "symbol": "Be"
+    },
+    "5": {
+        "name": "Boro",
+        "symbol": "B"
+    },
+    "6": {
+        "name": "Carbon",
+        "symbol": "C"
+    },
+    "7": {
+        "name": "Nitrogen",
+        "symbol": "N"
+    },
+    "8": {
+        "name": "Oxygen",
+        "symbol": "O"
+    },
+    "9": {
+        "name": "Fluorine",
+        "symbol": "F"
+    },
+    "10": {
+        "name": "Neon",
+        "symbol": "Ne"
+    },
+    "11": {
+        "name": "",
+        "symbol": ""
+    }
+    
+}
