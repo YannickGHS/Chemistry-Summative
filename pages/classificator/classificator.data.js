@@ -13,7 +13,11 @@
  * ============================================================================
  */
 
-//variable for molecule
+document.write("Classificator not yet available");
+
+let name;
+let molecule = new Molecule(name);
+
 //if else statement to devide the molecule into smaller strings
 //if else statement to find if its a complex, simple or bio molecule
 //if complex than find all elements contained in the molecule (you might whant to create a JSON file with a periodic table)
@@ -22,3 +26,13 @@
 //if bio then do the same as complex but find for functional groups
 //print to screen the molecule
 //EXTRA: make a 3d model usig three.js
+
+const findElement(elementFix, name) => {
+  return name.search(elementFix, name) != -1;
+}
+
+function main(){
+  for(int i = 0; i < /*value to define*/; i++){ //consider using ECMAScript 6 loop
+    
+  }
+}
