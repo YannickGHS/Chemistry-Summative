@@ -13,26 +13,27 @@
  * ============================================================================
  */
 
-document.write("Classificator not yet available");
+let molecule = document.getElementById("chemComp");
+const prefix = ["meth", "eth", "prop", "but", "pent", "hex", "hept", "oct", "non", "dec"];
 
-let name;
-let molecule = new Molecule(name);
-
-//if else statement to devide the molecule into smaller strings
-//if else statement to find if its a complex, simple or bio molecule
-//if complex than find all elements contained in the molecule (you might whant to create a JSON file with a periodic table)
-//count the number of atoms for each element
-//if simple than find the element it is made of
-//if bio then do the same as complex but find for functional groups
-//print to screen the molecule
-//EXTRA: make a 3d model usig three.js
-
-const findElement(elementFix, name) => {
-  return name.search(elementFix, name) != -1;
+String.prototype.eraseExtraChar = function(){
+  const chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ',', '-'];
+  for(let i of chars)
+    if(i == this.charAt(0))
+      return this.substring(1, this.length-1);
+  else
+    return this;
 }
 
-function main(){
-  for(int i = 0; i < /*value to define*/; i++){ //consider using ECMAScript 6 loop
-    
-  }
+String.prototype.findAlcohol = function(priority){
+  for(let i of prefix)
+    if(this.includes(i.concat()))
+}
+
+function loop(){
+  let temp;
+  do{temp = molecule.eraseExtraChar();}while(temp == molecule);//remove the number and other unwhanted characters at the beginning of the string molecule
+  do{
+    //identify secondary carbon chain
+  }while(true);
 }

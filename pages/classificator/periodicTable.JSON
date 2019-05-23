@@ -1,43 +1,53 @@
 {
-    "1": {
+    "H": {
         "name": "Hydrogen",
-        "symbol": "H"
+        "symbol": "H",
+        "fix": "hydro"
     },
-    "2": {
+    "He": {
         "name": "Helium",
-        "symbol": "He"
+        "symbol": "He",
+        "fix": "n/a"
     },
-    "3": {
+    "Li": {
         "name": "Lithium",
-        "symbol": "Li"
+        "symbol": "Li",
+        "fix": "lithium"
     },
-    "4": {
+    "Be": {
         "name": "Beryllium",
-        "symbol": "Be"
+        "symbol": "Be",
+        "fix": "berillium"
     },
-    "5": {
+    "B": {
         "name": "Boro",
-        "symbol": "B"
+        "symbol": "B",
+        "fix": "boro"
     },
-    "6": {
+    "C": {
         "name": "Carbon",
-        "symbol": "C"
+        "symbol": "C",
+        "fix": "carbon"
     },
-    "7": {
+    "N": {
         "name": "Nitrogen",
-        "symbol": "N"
+        "symbol": "N",
+        "fix": "nitro"
     },
-    "8": {
+    "O": {
         "name": "Oxygen",
-        "symbol": "O"
+        "symbol": "O",
+        "fix": "oxy"
     },
-    "9": {
+    "F": {
         "name": "Fluorine",
-        "symbol": "F"
+        "symbol": "F",
+        "fix": "fluoro"
     },
-    "10": {
+    "Ne": {
         "name": "Neon",
-        "symbol": "Ne"
+        "symbol": "Ne",
+        "fix": "n/a"
     },
     "11": {
         "name": "",
