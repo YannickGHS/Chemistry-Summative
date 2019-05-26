@@ -14,26 +14,41 @@
  */
 
 let molecule = document.getElementById("chemComp");
-const prefix = ["meth", "eth", "prop", "but", "pent", "hex", "hept", "oct", "non", "dec"];
+const list1 = ['bromo', 'butoxy', 'butyl', 'cloro', 'ethoxy', 'ethyl', 'fluoro', 'hydroxy', 'iodio', 'methoxy', 'metyl', 'phenyl'];
+const list2 = ['di', 'tri'];
+const forbiddenChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ',', '-'];
 
-String.prototype.eraseExtraChar = function(){
-  const chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ',', '-'];
-  for(let i of chars)
-    if(i == this.charAt(0))
-      return this.substring(1, this.length-1);
-  else
-    return this;
-}
-
-String.prototype.findAlcohol = function(priority){
-  for(let i of prefix)
-    if(this.includes(i.concat()))
+String.prototype.removeForbiddenChars = function(){
+  let test = false;
+  do{
+    for(let i of forbiddenChars){
+      if(this.charAt(0) === i){
+        this = this.substring(1);
+        test = true;
+      }
+      else
+        test = test || false;
+    }
+  }while(test);
 }
 
 function loop(){
-  let temp;
-  do{temp = molecule.eraseExtraChar();}while(temp == molecule);//remove the number and other unwhanted characters at the beginning of the string molecule
+  let test = false;
   do{
-    //identify secondary carbon chain
-  }while(true);
+    molecule.forbiddenChars();
+    for(let j of list2){
+      if(molecule.search(j) == 0){
+        molecule = molecule.substring(molecule.search(j), molecule.search(j) + j.length);
+      }
+    }
+    for(let i of list1){
+      if(molecule.search(i) == 0){
+        molecule = molecule.substring(molecule.search(i), molecule.search(i) + i.length);
+        test = true;
+        break;
+      }
+      else
+        test = test || false;
+    }
+  }while(test)
 }
