@@ -33,4 +33,23 @@ function equilibrium(){
     }
 }
 
-document.getElementById("button").addEventListener("click", equilibrium);
+document.getElementById("button").addEventListener("click", change);
+
+function change(){
+    try {
+        
+        let inital = [0.179, 0, "1e-5", 1];
+        let Ke = 10;
+        const determinant = Math.pow((Ke * inital[0] + Ke * inital[1] + inital[2] + inital[3]), 2) - 4 * (-1 * Ke * inital[0] * inital[1] + inital[2] * inital[3]) * (1 - Ke);
+        let x;
+
+        if(determinant < 0) throw "invalid numbers";
+        else{
+            x = (-1 * (Ke * inital[0] + Ke * inital[1] + inital[2] + inital[3]) + Math.sqrt(determinant)) / Math.pow(1 - Ke, 2);
+            document.write(x);
+        }
+        
+    } catch (e) {
+        alert(e);
+    }
+}
