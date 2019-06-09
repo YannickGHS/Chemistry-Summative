@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ChemistryJs</title>
+        <title>Chemistry Js</title>
         <link rel="stylesheet" href="../../general.style.css">
     </head>
     <body>
         <header>
-                <h1 id="title">Chemistry js</h1>
+                <h1 id="title">Chemistry Js</h1>
                 <div id="subtitle">The all-in-one software for compounds analisis</div>
         </header>
         <nav>
@@ -17,11 +17,42 @@
             </ul>
         </nav>
         <article>
-            The ChemistryJs Equilibirum calculator tool permits to calculate the concentration at equilibrium of a variety of chemical compounds. It also calculates the Ke, Ksp, Ka, Kb.<br>
-            Try it for yourself:<br>
+            <div>
+                <h3>K forward given concentration</h3>
+                Insert in the first field the amount of moles and the concentration in the second<br>
+                Concentration 1: <input id="Kf0" type="text"><input id="kf1" type="text"><br>
+                Concentration 2: <input id="Kf2" type="text"><input id="kf3" type="text"><br>
+                <button id="Kf" type="button">Calculate K forward</button>
+                <div id="KfResoult"></div>
+            </div>
+            <hr>
+            <div>
+                <h3>K reverse given concentration</h3>
+                Insert in the first field the amount of moles and the concentration in the second<br>
+                Concentration 1: <input id="Kr0" type="text"><input id="kr1" type="text"><br>
+                Concentration 2: <input id="Kr2" type="text"><input id="kr3" type="text"><br>
+                <button id="Kr" type="button">Calculate K reverse</button>
+                <div id="KrResoult"></div>
+            </div>
+            <hr>
+            <div>
+                <h3>Equilibrium constant given concertation at equilibirum</h3>
+                Insert in the following field the concentration for each of the reagents and products. Indicate also the amount produced/used in the reaction.<br>
+            </div>
             <input id="coefficen1" type="text"><input id="concentration1" type="text"> + <input id="coefficen2" type="text"><input id="concentration2" type="text"> <=> <input id="coefficen3" type="text"><input id="concentration3" type="text"> + <input id="coefficen4" type="text"><input id="concentration4" type="text"><br>
-            <button type="button" id="button">Calculate Ka</button>
+            <button type="button" id="button">Calculate Ke</button>
             <div id="resoult"></div>
+            <hr>
+            <div>
+                <h3>Change in concentration given initial concentration and equilibirum constant</h3>
+                Initial concentration reagent 1: <input id="conIni1" type="text"><br>
+                Initial concentration reagent 2: <input id="conIni2" type="text"><br>
+                Initial concentration product 1: <input id="conIni3" type="text"><br>
+                Initial concentration product 2: <input id="conIni4" type="text"><br>
+                Equilibrium constant: <input id="Ke" type="text"><br>
+                <button type="button" id="change">Calculate change</button>
+                <div id="resoult2"></div>
+            </div>
         </article>
         <script src="./equilibirum.data.js"></script>
     </body>

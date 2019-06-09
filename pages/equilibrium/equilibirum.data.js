@@ -9,9 +9,26 @@
  * ========================================================================
 */
 
+function kForward(id){
+    let coefficent1 = document.getElementById(id[0]).value;
+    let concentration1 = document.getElementById(id[1]).value;
+    let coefficent2 = document.getElementById(id[2]).value;
+    let concentration2 = document.getElementById(id[3]).value;
+
+    document.getElementById("kfResult").innerHTML = Math.pow(concentration1, coefficent1) * Math.pow(concentration2, coefficent2);
+}
+
+function kReverse(id){
+    let coefficent1 = document.getElementById(id[0]).value;
+    let concentration1 = document.getElementById(id[1]).value;
+    let coefficent2 = document.getElementById(id[2]).value;
+    let concentration2 = document.getElementById(id[3]).value;
+
+    document.getElementById("krResult").innerHTML = Math.pow(concentration1, coefficent1) * Math.pow(concentration2, coefficent2);
+}
+
 function equilibrium(){
     try {
-
         let coefficent1 = document.getElementById("coefficen1").value;
         let concentration1 = document.getElementById("concentration1").value;
         let coefficent2 = document.getElementById("coefficen2").value;
@@ -33,23 +50,27 @@ function equilibrium(){
     }
 }
 
-document.getElementById("button").addEventListener("click", change);
+document.getElementById("button").addEventListener("click", equilibrium);
 
 function change(){
-    try {
-        
-        let inital = [0.179, 0, "1e-5", 1];
-        let Ke = 10;
-        const determinant = Math.pow((Ke * inital[0] + Ke * inital[1] + inital[2] + inital[3]), 2) - 4 * (-1 * Ke * inital[0] * inital[1] + inital[2] * inital[3]) * (1 - Ke);
-        let x;
+    let concentration1 = document.getElementById("conIni1").value;
+    let concentration2 = document.getElementById("conIni2").value;
+    let concentration3 = document.getElementById("conIni3").value;
+    let concentration4 = document.getElementById("conIni4").value;
 
-        if(determinant < 0) throw "invalid numbers";
-        else{
-            x = (-1 * (Ke * inital[0] + Ke * inital[1] + inital[2] + inital[3]) + Math.sqrt(determinant)) / Math.pow(1 - Ke, 2);
-            document.write(x);
-        }
-        
-    } catch (e) {
-        alert(e);
-    }
+    let Ke = document.getElementById("Ke").value; //get from document
+
+    let a = Ke - 1;
+    let b = -1 * (Ke * concentration1 + Ke * concentration2 + 1 * concentration3 + 1 * concentration4);
+    let c = Ke * concentration1 * concentration2 - concentration3 * concentration4;
+
+    document.getElementById("resoult2").innerHTML = (-1 *b + Math.sqrt(Math.pow(b, 2) - (4 * a * c)))/(2 * a);
 }
+
+document.getElementById("change").addEventListener("click", change);
+
+document.getElementById("Kf").addEventListener("click", kForward(["kf0", "kf1", "kf2", "kf3"]));
+
+document.getElementById("Kr").addEventListener("click", kReverse(["kr0", "kr1", "kr2", "kr3"]));
+
+
