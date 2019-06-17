@@ -9,22 +9,22 @@
  * ========================================================================
 */
 
-function kForward(id){
-    let coefficent1 = document.getElementById(id[0]).value;
-    let concentration1 = document.getElementById(id[1]).value;
-    let coefficent2 = document.getElementById(id[2]).value;
-    let concentration2 = document.getElementById(id[3]).value;
+function kForward(){
+    let coefficent1 = document.getElementById("Kf0").value;
+    let concentration1 = document.getElementById("Kf1").value;
+    let coefficent2 = document.getElementById("Kf2").value;
+    let concentration2 = document.getElementById("Kf3").value;
 
-    document.getElementById("kfResult").innerHTML = Math.pow(concentration1, coefficent1) * Math.pow(concentration2, coefficent2);
+    document.getElementById("KfResoult").innerHTML = Math.pow(concentration1, coefficent1) * Math.pow(concentration2, coefficent2);
 }
 
-function kReverse(id){
-    let coefficent1 = document.getElementById(id[0]).value;
-    let concentration1 = document.getElementById(id[1]).value;
-    let coefficent2 = document.getElementById(id[2]).value;
-    let concentration2 = document.getElementById(id[3]).value;
+function kReverse(){
+    let coefficent1 = document.getElementById("Kr0").value;
+    let concentration1 = document.getElementById("Kr1").value;
+    let coefficent2 = document.getElementById("Kr2").value;
+    let concentration2 = document.getElementById("Kr3").value;
 
-    document.getElementById("krResult").innerHTML = Math.pow(concentration1, coefficent1) * Math.pow(concentration2, coefficent2);
+    document.getElementById("KrResoult").innerHTML = Math.pow(concentration1, coefficent1) * Math.pow(concentration2, coefficent2);
 }
 
 function equilibrium(){
@@ -50,8 +50,6 @@ function equilibrium(){
     }
 }
 
-document.getElementById("button").addEventListener("click", equilibrium);
-
 function change(){
     let concentration1 = document.getElementById("conIni1").value;
     let concentration2 = document.getElementById("conIni2").value;
@@ -67,10 +65,26 @@ function change(){
     document.getElementById("resoult2").innerHTML = (-1 *b + Math.sqrt(Math.pow(b, 2) - (4 * a * c)))/(2 * a);
 }
 
+function pH(){
+    let n = document.getElementById("val").value;
+    document.getElementById("pHRes").innerHTML = -Math.log(n);
+}
+
+function revpH(){
+    let n = document.getElementById("val1").value;
+    document.getElementById("revpH").innerHTML = Math.pow(10, -n);
+}
+
 document.getElementById("change").addEventListener("click", change);
 
-document.getElementById("Kf").addEventListener("click", kForward(["kf0", "kf1", "kf2", "kf3"]));
+document.getElementById("Kf").addEventListener("click", kForward);
 
-document.getElementById("Kr").addEventListener("click", kReverse(["kr0", "kr1", "kr2", "kr3"]));
+document.getElementById("Kr").addEventListener("click", kReverse);
+
+document.getElementById("button").addEventListener("click", equilibrium);
+
+document.getElementById("pH").addEventListener("click", pH);
+
+document.getElementById("conc").addEventListener("click", revpH);
 
 

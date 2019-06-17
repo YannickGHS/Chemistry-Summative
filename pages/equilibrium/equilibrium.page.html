@@ -20,8 +20,8 @@
             <div>
                 <h3>K forward given concentration</h3>
                 Insert in the first field the amount of moles and the concentration in the second<br>
-                Concentration 1: <input id="Kf0" type="text"><input id="kf1" type="text"><br>
-                Concentration 2: <input id="Kf2" type="text"><input id="kf3" type="text"><br>
+                Concentration 1: <input id="Kf0" type="text"><input id="Kf1" type="text"><br>
+                Concentration 2: <input id="Kf2" type="text"><input id="Kf3" type="text"><br>
                 <button id="Kf" type="button">Calculate K forward</button>
                 <div id="KfResoult"></div>
             </div>
@@ -29,8 +29,8 @@
             <div>
                 <h3>K reverse given concentration</h3>
                 Insert in the first field the amount of moles and the concentration in the second<br>
-                Concentration 1: <input id="Kr0" type="text"><input id="kr1" type="text"><br>
-                Concentration 2: <input id="Kr2" type="text"><input id="kr3" type="text"><br>
+                Concentration 1: <input id="Kr0" type="text"><input id="Kr1" type="text"><br>
+                Concentration 2: <input id="Kr2" type="text"><input id="Kr3" type="text"><br>
                 <button id="Kr" type="button">Calculate K reverse</button>
                 <div id="KrResoult"></div>
             </div>
@@ -38,8 +38,10 @@
             <div>
                 <h3>Equilibrium constant given concertation at equilibirum</h3>
                 Insert in the following field the concentration for each of the reagents and products. Indicate also the amount produced/used in the reaction.<br>
+                General formula for a reaction: aX + bY <=> cZ + dW<br>
+                Keq is obtained using the formula ([Z]^c + [W]^d) / ([X]^a + [Y]^b)
             </div>
-            <input id="coefficen1" type="text"><input id="concentration1" type="text"> + <input id="coefficen2" type="text"><input id="concentration2" type="text"> <=> <input id="coefficen3" type="text"><input id="concentration3" type="text"> + <input id="coefficen4" type="text"><input id="concentration4" type="text"><br>
+            <input id="coefficen1" type="text" placeholder="a"><input id="concentration1" type="text" placeholder="[X]"> + <input id="coefficen2" type="text" placeholder="b"><input id="concentration2" type="text" placeholder="[Y]"> <=> <input id="coefficen3" type="text" placeholder="c"><input id="concentration3" type="text" placeholder="[Z]"> + <input id="coefficen4" type="text" placeholder="d"><input id="concentration4" type="text" placeholder="[W]"><br>
             <button type="button" id="button">Calculate Ke</button>
             <div id="resoult"></div>
             <hr>
@@ -52,6 +54,20 @@
                 Equilibrium constant: <input id="Ke" type="text"><br>
                 <button type="button" id="change">Calculate change</button>
                 <div id="resoult2"></div>
+            </div>
+            <hr>
+            <div>
+                <h3>Calculate pH</h3>
+                <input id="val" type="text" placeholder="concentration">
+                <button type="button" id="pH">claculate pH</button>
+                <div id="pHRes"></div>
+            </div>
+            <hr>
+            <div>
+                <h3>Calculate concentration form pH</h3>
+                <input id="val1" type="text" placeholder="pH">
+                <button type="button" id="conc">Calculate concentration</button>
+                <div id="revpH"></div>
             </div>
         </article>
         <script src="./equilibirum.data.js"></script>

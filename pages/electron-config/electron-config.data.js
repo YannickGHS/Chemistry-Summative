@@ -9,4 +9,7 @@
  * display the electron configuration of the element.
  */
 
+ let canvas = document.getElementById("canvas");
+ let ctx = canvas.getContext("2d");
+
  
