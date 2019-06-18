@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ChemistryJs</title>
+        <link rel="stylesheet" href="../../general.style.css">
+    </head>
+    <body>
+        <header>
+                <h1 id="title">Chemistry Js</h1>
+                <div id="subtitle">The all-in-one software for compounds analysis</div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../../home.html">home page</a> </li>
+                <li><a href="../classificator/classificato.page.html">Classificator</a></li>
+                <li><a href="../equilibrium/equilibrium.page.html">Equilibrium</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div>
+                <h2>Biomolecule name generator</h2>
+                This tool will generate the IUPAC name of the biomolecule given the number of carbons on the main chain and side chain, the position of the sidechain, any halogen element,
+                the functional group and its position, if there are any benzene and if the molecule is ciclic or not.
+                <hr>
+                <h4>Main carbon chain</h4>
+                Number of carbons <strong>Insert only the number of carbons in the main chain!</strong>: <input id="nOfC" type="text" placeholder="#"><br>
+                Functional group: <select id="funGroup">
+                    <option>Alkane</option>
+                    <option>Alkyne</option>
+                    <option>Alkene</option>
+                    <option>Amine</option>
+                    <option>Alcohol</option>
+                    <option>Ketone</option>
+                    <option>Aldehyde</option>
+                    <option>Amide</option>
+                    <option>Ester</option>
+                    <option>Carboxylic Acid</option>
+                </select><br>
+                Position functional group (number of carbon): <input id="funPos" type="number" placeholder="#"><br>
+                Halogens (leave blank if none. Separate each element with a semicolon): <input id="halo" type="text" placeholder="es: F, Cl..."><br>
+                Is ciclic? <select id="benzene">
+                    <option>No</option>
+                    <option>Yes</option>
+                </select><br> 
+                <hr>
+                <h4>Side carbon chain</h4>
+                Number of side chains: <input id="nOfSide" type="number" placeholder="0">
+                <object></object>
+            </div>
+        </article>
+    </body>
+</html>
