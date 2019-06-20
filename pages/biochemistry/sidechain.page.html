@@ -1,5 +1,23 @@
 <!DOCTYPE html>
-<header></header>
+<header>
+    <link rel="stylesheet" href="../../general.style.css">
+</header>
 <body>
-    
+    <hr>
+        Number of carbons <strong>Insert only the number of carbons in the side chain!</strong>: <input id="nOfC-side" type="text" placeholder="#"><br>
+    Functional group: <select id="funGroup-side">
+        <option>Alkane</option>
+        <option>Alkyne</option>
+        <option>Alkene</option>
+        <option>Amine</option>
+        <option>Alcohol</option>
+        <option>Ketone</option>
+        <option>Aldehyde</option>
+        <option>Amide</option>
+        <option>Ester</option>
+        <option>Carboxylic Acid</option>
+        <option>Phenyl</option>
+    </select><br>
+    Position functional group (number of carbon): <input id="funPos-side" type="number" placeholder="#"><br>
+    Halogens (leave blank if none. Separate each element with a semicolon): <input id="halo-side" type="text" placeholder="es: F, Cl..."><br>
 </body>

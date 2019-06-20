@@ -23,30 +23,33 @@
                 the functional group and its position, if there are any benzene and if the molecule is ciclic or not.
                 <hr>
                 <h4>Main carbon chain</h4>
-                Number of carbons <strong>Insert only the number of carbons in the main chain!</strong>: <input id="nOfC" type="text" placeholder="#"><br>
+                Number of carbons <strong>Insert only the number of carbons in the main chain!</strong>: <input id="nOfC" type="number" value="0" placeholder="#"><br>
                 Functional group: <select id="funGroup">
-                    <option>Alkane</option>
-                    <option>Alkyne</option>
-                    <option>Alkene</option>
-                    <option>Amine</option>
-                    <option>Alcohol</option>
-                    <option>Ketone</option>
-                    <option>Aldehyde</option>
-                    <option>Amide</option>
-                    <option>Ester</option>
-                    <option>Carboxylic Acid</option>
+                    <option value="alkane">Alkane</option>
+                    <option value="alkyne">Alkyne</option>
+                    <option value="alkene">Alkene</option>
+                    <option value="amine">Amine</option>
+                    <option value="alcohol">Alcohol</option>
+                    <option value="ketone">Ketone</option>
+                    <option value="aldehyde">Aldehyde</option>
+                    <option value="amide">Amide</option>
+                    <option value="ester">Ester</option>
+                    <option value="carboxylic acid">Carboxylic Acid</option>
                 </select><br>
-                Position functional group (number of carbon): <input id="funPos" type="number" placeholder="#"><br>
-                Halogens (leave blank if none. Separate each element with a semicolon): <input id="halo" type="text" placeholder="es: F, Cl..."><br>
-                Is ciclic? <select id="benzene">
+                Position functional group (number of carbon): <input id="funPos" type="number" placeholder="#" value="0"><br>
+                Halogens (leave blank if none. Separate each element with a space): <input id="halo" type="text" placeholder="es: F Cl..."><br>
+                Is ciclic? <select id="cyclo">
                     <option>No</option>
                     <option>Yes</option>
                 </select><br> 
                 <hr>
                 <h4>Side carbon chain</h4>
-                Number of side chains: <input id="nOfSide" type="number" placeholder="0">
-                <object></object>
+                <button id="addSide" type="button">Add side chain</button>
+                <div id="sidechain"></div>
             </div>
+            <button id="submit" type="button">Generate name!</button>
+            <div id="resoult"></div>
         </article>
+        <script src="./biochemistry.data.js"></script>
     </body>
 </html>
