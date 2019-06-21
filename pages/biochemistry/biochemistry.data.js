@@ -24,7 +24,7 @@ function addSide(){
     document.getElementById("sidechain").appendChild(sidechain[sidechain.length -1]);
 }
 
-//document.getElementById("addSide").addEventListener("click", addSide);
+document.getElementById("addSide").addEventListener("click", addSide);
 
 //=======================================================================================
 function generateName(){
@@ -49,7 +49,7 @@ function generateName(){
             default: throw "not a valid number. Field: number of carbons";
         }
 
-        if(funGroup != "alkane" && funGroup != ""){
+        if(funGroup != "alkane" && funGroup == "0"){
             if(funGroup == "alkyne"){
                 name = name + "-" + posFun + "-";
                 name = name + "yne";
@@ -134,7 +134,7 @@ function generateName(){
             if(cyclo == "Yes" && (funGroup == "alkane" || funGroup == "alkene"))
                 name = "cyclo" + name;
         }
-        document.getElementById("resoult").innerHTML = name;
+        document.getElementById("resoult").innerHTML = "Based on the data you inserted the name of the molecule is " + name;
     }catch(err){
         alert(err);
     }
