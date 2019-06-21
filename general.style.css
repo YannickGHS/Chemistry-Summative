@@ -23,8 +23,8 @@
 
 nav{
     size: 8cm;
-    color: black;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 article{
@@ -54,4 +54,32 @@ h3{
 
 header{
     background-image: url("newseventsimage_1537198485721_mainnews2012_x1.jpg");
+}
+
+body{
+    background-image: url("./noisy-texture-200x100-o12-d20-c-141414-t0.png");
+}
+
+article{
+    background-color: white;
+}
+
+ul{
+    list-style-type: square;
+}
+#nav{
+    list-style-type: none;
+}
+a:hover{
+    color: dodgerblue;
+}
+a:visited{
+    color: white;
+}
+a:link{
+    color: white;
+}
+footer{
+    color: white;
+    background-color: rgb(0, 30, 59);
 }
