@@ -24,7 +24,7 @@ function addSide(){
     document.getElementById("sidechain").appendChild(sidechain[sidechain.length -1]);
 }
 
-document.getElementById("addSide").addEventListener("click", addSide);
+//document.getElementById("addSide").addEventListener("click", addSide);
 
 //=======================================================================================
 function generateName(){
